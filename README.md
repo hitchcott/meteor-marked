@@ -16,6 +16,7 @@ Per the [docs](https://github.com/chjj/marked), the default options:
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
+  emojis: function(emoji) { return '<img src="/emojis/' + emoji + '.png" >'; }, // defualt is `false`
   tables: true,
   breaks: false,
   pedantic: false,

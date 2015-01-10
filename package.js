@@ -1,10 +1,10 @@
 // Source: https://github.com/chjj/marked
 
 Package.describe({
-  summary: "A markdown parser and compiler. Built for speed.",
-  version: "0.3.2_4",
-  name: "chuangbo:marked",
-  git: "https://github.com/chuangbo/meteor-marked.git"
+  summary: "A markdown parser and compiler. With Emojis.",
+  version: "0.3.0",
+  name: "hitchcott:marked-with-emojis",
+  git: "https://github.com/hitchcott/meteor-marked.git"
 });
 
 Package.on_use(function (api) {

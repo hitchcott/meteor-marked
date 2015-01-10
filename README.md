@@ -10,13 +10,15 @@ used with `{ weak: true }`), and a `Package['chuangbo:marked'].marked` (always):
 
 > This package lets you use Markdown in your templates. It's easy: just put your markdown inside {{#markdown}} ... {{/markdown}} tags. You can still use all of the usual Meteor template features inside a Markdown block, such #each, and you still get reactivity.
 
-Per the [docs](https://github.com/chjj/marked), the default options:
+Per the [docs](https://github.com/chjj/marked), exmaple using emoji:
 
 ```js
+emojis = { ... } // GET https://api.github.com/emojis
+
 marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
-  emojis: function(emoji) { return '<img src="/emojis/' + emoji + '.png" >'; }, // defualt is `false`
+  emoji: function (key) { "<img src='#{emojis[key]}' class='marked-emoji' width='20' height='20'/>"; } // default is `false`
   tables: true,
   breaks: false,
   pedantic: false,
